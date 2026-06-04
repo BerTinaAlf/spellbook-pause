@@ -19,7 +19,7 @@ const DEFAULT_MESSAGES = [
   "冒险暂时停驻",
   "旅途尚未结束",
   "英雄们正在扎营",
-  "下一页传奇尚未展开。"
+  "下一页传奇尚未展开"
 ];
 
 let wasPaused = false;
