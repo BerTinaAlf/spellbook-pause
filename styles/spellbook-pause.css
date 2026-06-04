@@ -1,0 +1,148 @@
+#pause.spellbook-pause-source,
+#pause.spellbook-pause-source.paused,
+.dnd5e2#pause.spellbook-pause-source.paused {
+  animation: none !important;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+  outline: 0 !important;
+  pointer-events: none !important;
+}
+
+#pause.spellbook-pause-source::before,
+#pause.spellbook-pause-source::after,
+#pause.spellbook-pause-source > *,
+#pause.spellbook-pause-source img,
+#pause.spellbook-pause-source figcaption {
+  display: none !important;
+}
+
+.spellbook-pause-overlay {
+  --spellbook-pause-gold: #f5dfad;
+
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+  transform: translate(-50%, -50%) !important;
+  width: min(760px, 92vw) !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.35rem !important;
+  pointer-events: none !important;
+  text-align: center !important;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+  filter: none !important;
+  outline: 0 !important;
+  overflow: visible !important;
+  z-index: 10000 !important;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.spellbook-pause-overlay.spellbook-pause-active,
+.spellbook-pause-overlay.spellbook-pause-exiting {
+  opacity: 1;
+  visibility: visible;
+}
+
+.spellbook-pause-overlay.spellbook-pause-entering {
+  animation: spellbook-pause-fade-in 450ms ease-out both !important;
+}
+
+.spellbook-pause-overlay.spellbook-pause-exiting {
+  animation: spellbook-pause-fade-out 450ms ease-in both !important;
+}
+
+.spellbook-pause-overlay[data-spellbook-pause-position="lowerQuarter"] {
+  top: 75% !important;
+}
+
+.spellbook-pause-overlay .spellbook-pause__image {
+  position: relative !important;
+  display: block !important;
+  flex: 0 0 auto !important;
+  width: min(400px, 56vw) !important;
+  max-width: none !important;
+  height: auto !important;
+  max-height: none !important;
+  margin: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+  outline: 0 !important;
+  opacity: 1 !important;
+  animation: spellbook-pause-float 5.5s ease-in-out infinite !important;
+  z-index: 1 !important;
+}
+
+.spellbook-pause-overlay .spellbook-pause__caption {
+  display: block !important;
+  position: relative !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0.1rem 0.75rem !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--spellbook-pause-gold) !important;
+  font-family: "HuiwenMingchao", "Microsoft YaHei UI", "Microsoft YaHei", "Noto Serif SC", serif !important;
+  font-size: clamp(1.15rem, 2vw, 1.85rem) !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  overflow-wrap: anywhere !important;
+  text-shadow:
+    0 0 8px rgba(255, 223, 150, 0.74),
+    0 0 22px rgba(198, 111, 45, 0.52),
+    0 3px 12px rgba(0, 0, 0, 0.86) !important;
+  z-index: 1 !important;
+}
+
+@keyframes spellbook-pause-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes spellbook-pause-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes spellbook-pause-fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
