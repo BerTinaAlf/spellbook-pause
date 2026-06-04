@@ -4,20 +4,6 @@
 
 启用后，模块会隐藏 Foundry 默认的暂停图标与文字，改为显示法术书 GIF，并随机展示一条内置的冒险提示语。
 
-## GIF 文件
-
-法术书 GIF 的本机位置：
-
-```text
-D:\fvtt\FoundryVTT\Data\modules\spellbook-pause\assets\spellbook-pause.gif
-```
-
-模块内使用的路径固定为：
-
-```text
-modules/spellbook-pause/assets/spellbook-pause.gif
-```
-
 ## 设置
 
 - `暂停动画位置`：选择暂停动画显示在屏幕中央，或显示在屏幕下方 1/4 的位置。
