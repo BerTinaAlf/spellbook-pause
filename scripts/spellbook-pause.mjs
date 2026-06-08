@@ -98,16 +98,28 @@ function ensureOverlay() {
     overlay.id = OVERLAY_ID;
     overlay.className = "spellbook-pause-overlay";
 
+    const title = document.createElement("div");
+    title.className = "spellbook-pause__title";
+
+    const titleLeft = document.createElement("span");
+    titleLeft.className = "spellbook-pause__title-text";
+    titleLeft.textContent = "游戏";
+
     const image = document.createElement("img");
     image.className = "spellbook-pause__image";
     image.src = DEFAULT_IMAGE_PATH;
     image.alt = "Spellbook pause";
     image.draggable = false;
 
+    const titleRight = document.createElement("span");
+    titleRight.className = "spellbook-pause__title-text";
+    titleRight.textContent = "暂停";
+
     const caption = document.createElement("figcaption");
     caption.className = "spellbook-pause__caption";
 
-    overlay.append(image, caption);
+    title.append(titleLeft, image, titleRight);
+    overlay.append(title, caption);
     document.body.append(overlay);
   }
 

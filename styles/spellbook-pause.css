@@ -22,7 +22,6 @@
 
 .spellbook-pause-overlay {
   --spellbook-pause-gold: #f5dfad;
-
   position: fixed !important;
   top: 50% !important;
   left: 50% !important;
@@ -72,15 +71,54 @@
   top: 75% !important;
 }
 
+.spellbook-pause-overlay .spellbook-pause__title {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: clamp(0.05rem, 0.45vw, 0.28rem) !important;
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+.spellbook-pause-overlay .spellbook-pause__title-text {
+  flex: 0 1 auto !important;
+  min-width: 0 !important;
+  color: rgba(184, 210, 255, 0.72) !important;
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(238, 246, 255, 0.86) 0%,
+      rgba(184, 210, 255, 0.58) 26%,
+      rgba(177, 96, 255, 0.42) 58%,
+      rgba(24, 26, 44, 0.5) 100%
+    ) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  font-family: "HuiwenMingchao", "Microsoft YaHei UI", "Microsoft YaHei", "Noto Serif SC", serif !important;
+  font-size: clamp(1.8rem, 5vw, 4rem) !important;
+  font-weight: 800 !important;
+  -webkit-text-fill-color: transparent !important;
+  -webkit-text-stroke: 0.12px rgba(245, 223, 173, 0.5) !important;
+  line-height: 1 !important;
+  letter-spacing: 0 !important;
+  paint-order: stroke fill !important;
+  white-space: nowrap !important;
+  text-shadow:
+    0 0 3px rgba(118, 55, 180, 0.32),
+    0 0 10px rgba(66, 18, 118, 0.28),
+    0 3px 10px rgba(0, 0, 0, 0.72) !important;
+}
+
 .spellbook-pause-overlay .spellbook-pause__image {
   position: relative !important;
   display: block !important;
   flex: 0 0 auto !important;
-  width: min(400px, 56vw) !important;
+  width: clamp(150px, 34vw, 400px) !important;
   max-width: none !important;
   height: auto !important;
   max-height: none !important;
-  margin: 0 !important;
+  margin: 0 clamp(-4rem, -6vw, -1.25rem) !important;
   border: 0 !important;
   box-shadow: none !important;
   filter: none !important;
