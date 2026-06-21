@@ -2,7 +2,7 @@
   "id": "spellbook-pause",
   "title": "Spellbook Pause",
   "description": "Replace Foundry VTT's default pause overlay with a spellbook GIF and built-in randomized adventure text.",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "type": "module",
   "authors": [
     {
@@ -10,9 +10,9 @@
     }
   ],
   "compatibility": {
-    "minimum": "12",
-    "verified": "13",
-    "maximum": "13"
+    "minimum": "13",
+    "verified": "14",
+    "maximum": "14"
   },
   "url": "https://github.com/BerTinaAlf/spellbook-pause",
   "manifest": "https://raw.githubusercontent.com/BerTinaAlf/spellbook-pause/main/module.json",
